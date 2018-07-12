@@ -1,6 +1,22 @@
 !function(){
-    var duration = 50
-    
+    var duration = 40
+    $('.actions').on('click','button',function(e){
+        let $button = $(e.currentTarget) //button
+        let speed = $button.attr('data-speed')
+        $button.addClass('active').siblings('.active').removeClass('active')
+        switch(speed){
+            case 'slow':
+                duration = 90
+                break
+            case 'normal':
+                duration = 40
+                break
+            case 'fast': 
+                duration = 10
+                break
+        }
+    })
+
     function writeCode(prefix,code,fn){
         let container = document.querySelector('#code')
         let styleTag = document.querySelector('#styleTag')
