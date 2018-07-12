@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .head{
+        width:600px;
+        height:600px;
+        border-radius:100%;
+        background:#3c9dca;
+        border: black solid thick;
+        margin: 0 auto;
+        }
+        .white{
+        width: 524px;
+        height: 462px;
+        border-radius: 100%;
+        position: relative;
+        top: 120px;
+        left: 38px;
+        background: #FFF;
+        border: black solid thin;
+        z-index: 0;
+        }
+        .eye_white {
+        position: relative;
+        top: 60px;
+        left: 130px;
+        z-index: 1;
+        }
+        .eye_white li{
+        width: 125px;
+        height: 152px;
+        border-radius: 100%;
+        background: #FFF;
+        list-style:none;
+        border: black solid thin;
+        display:block;
+        float:left;
+        }
+        .eye_black{
+        width: 25px;
+        height: 45px;
+        border-radius: 100%;
+        background: #000;
+        list-style:none;
+        top: 80px;
+        position:relative;
+        border: black solid thin;
+        display:block;
+        left: 10px;
+        -webkit-animation:move 6s ease infinite;
+        animation:move 6s ease infinite;
+        }
+        @-webkit-keyframes move {
+        16%{top:95px;left:30px;}
+        32%{top:100px;left:60px;}
+        48%{top:80px;left:90px}
+        64%{top:100px;left:60px}
+        80%{top:95px;left:30px}
+        }
+        @keyframes move {
+        16%{top:95px;left:30px;}
+        32%{top:100px;left:60px;}
+        48%{top:80px;left:90px}
+        64%{top:100px;left:60px}
+        80%{top:95px;left:30px}
+        }
+        .eye_black::before{
+            content:'';
+        width: 10px;
+        height: 15px;
+        border-radius: 100%;
+        background: #fff;
+        list-style: none;
+        top: 16px;
+        position: relative;
+        display: block;
+        left: 7px;
+        }
+        .line_left{
+        width: 150px;
+        height:2px;
+        transform:rotate(20deg);
+        top: 90px;
+        left: 14px;
+        position:relative;
+        border-radius: 10%;
+        background: #000;
+        list-style: none;
+        display: block;
+        }
+        .line_left::before{
+        content:'';
+        width: 150px;
+        height:2px;
+        top: 70px;
+        transform:rotate(-20deg);
+        position:relative;
+        border-radius: 10%;
+        background: #000;
+        list-style: none;
+        display: block;
+        }
+        .line_left::after{
+        content:'';
+        transform:rotate(-40deg);
+        width: 150px;
+        height:2px;
+        top: 120px;
+        left: 30px;
+        position:relative;
+        border-radius: 10%;
+        background: #000;
+        list-style: none;
+        display: block;
+        }
+        .line_right{
+        width: 150px;
+        height:2px;
+        transform:rotate(160deg);
+        top: 90px;
+        left: 370px;
+        position:relative;
+        border-radius: 10%;
+        background: #000;
+        list-style: none;
+        display: block;
+        }
+        .line_right::before{
+        content:'';
+        width: 150px;
+        height:2px;
+        bottom: 100px;
+        position:relative;
+        transform:rotate(30deg);
+        border-radius: 10%;
+        background: #000;
+        list-style: none;
+        display: block;
+        left:20px;
+        }
+        .line_right::after{
+        content:'';
+        width: 150px;
+        height:2px;
+        bottom: 50px;
+        transform:rotate(10deg);
+        left: 0px;
+        position:relative;
+        border-radius: 10%;
+        background: #000;
+        list-style: none;
+        display: block;
+        }
+        .nose{
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        background: #b90319;
+        list-style: none;
+        top: 60px;
+        position: relative;
+        border: black solid thin;
+        display: block;
+        left: 236px;
+        z-index:2;
+        }
+        .nose::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background: #FFF;
+        list-style: none;
+        top: 19px;
+        position: relative;
+        border: black solid thin;
+        display: block;
+        left: 9px;
+        }
+        .line_vertical{
+        width: 2px;
+        height: 310px;
+        top: 40px;
+        left: 258px;
+        position: relative;
+        border-radius: 10%;
+        background: #000;
+        z-index: 1;
+        }
+        .mouth{
+        width: 400px;
+        height: 400px;
+        border-radius: 100%;
+        top: -358px;
+        left: 62px;
+        position: relative;
+        background: #000;
+        z-index: -1;
+        }
+        .mouth::after{
+        content: '';
+        width: 402px;
+        height: 401px;
+        top: -4px;
+        left: -1px;
+        border-radius: 100%;
+        position: relative;
+        display: block;
+        background: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="eye_white">
+            <ul>
+            <li><div class="eye_black"></div></li>
+            <li><div class="eye_black"></div></li>
+            </ul>
+        </div>
+        <div class="white">
+            <div class="line_left">
+            </div>
+            <div class="line_right">
+            </div>
+            <div class="nose"></div>
+            <div class="line_vertical"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+</body>
+</html>
